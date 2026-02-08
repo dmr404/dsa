@@ -25,7 +25,7 @@ void printArr(int *arr, int n) {
     }
     cout<<endl;
 }
-int main() {
+/*int main() {
     int arr[] = {5,4,3,2,9};
     int n = sizeof(arr) / sizeof(int);
     
@@ -38,4 +38,24 @@ int main() {
         arr[i] = copyArr[i];
     }
     printArr(arr, n);
+}*/
+
+//without extra space (swap kr dia start end ko)
+int main() {
+    int arr[] = {2,4,6,8,10,9,7,5,3,1};
+    int n = sizeof(arr)/sizeof(int);
+
+    int start=0, end = n-1;
+    while(start<end){
+        /*int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;*/
+
+        swap(arr[start], arr[end]); //for swapping shorter way
+
+        start++;
+        end--;
+    }
+    printArr(arr, n);
+    return 0;
 }
