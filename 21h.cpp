@@ -42,3 +42,47 @@ using namespace std;
         cout<<endl;
     }
 }*/
+
+//QUESTION-4  INCOMPLETE
+/*int main () {
+    int arr[] = {1,2};
+    int matrix[2][2] = {{0}};
+    int n = sizeof(arr) / sizeof(int);
+    int row2 = n/2;
+    if(n%2==0) {
+        
+        for(int i = 0; i<row2; i++){
+            matrix[0][i] = arr[i];
+        }
+        for(int i = 0; i<row2; i++) {
+            matrix[1][i] = arr[i+row2];
+        }
+    }
+    for(int i=0; i<row2; i++){
+        for(int j = 0;j<row2; j++){
+            cout<<matrix[i][j]<<" ";
+        
+        }
+        cout<<endl;
+    }
+    cout<<n;
+}*/
+
+
+//QUESTION-5
+int main() {
+    int matrix[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+    int n = 3;
+    for(int i=0; i<2; i++){
+        for(int j = 0;j<3; j++){
+            swap(matrix[i][j-i], matrix[j][n-i]);
+        }
+    }
+    for(int i=0; i<n; i++){
+        for(int j = 0;j<n; j++){
+            cout<<matrix[i][j]<<" ";
+        
+        }
+        cout<<endl;
+    }
+}
