@@ -27,12 +27,13 @@ using namespace std;
 }*/
 
 //PAIR SUM
+/*
 int main() {
 vector<int> vec = {2,7,11,15};
 int target = 17;
 
 //BRUTE FORCE
-/*for(int i =0; i<vec.size(); i++) {
+for(int i =0; i<vec.size(); i++) {
     for(int j =0; j<vec.size(); j++) {
         if(i != j){
             if((vec[i]+vec[j]) == target) {
@@ -43,6 +44,39 @@ int target = 17;
         }
     }
 }
-}*/
 
 //LINEAR APPROCH
+int st = 0, end = vec.size()-1;
+int currSum=0;
+vector<int> ans;
+
+while(st<end){
+    currSum = vec[st]+vec[end];
+    if(currSum == target) {
+        ans.push_back(st);
+        ans.push_back(end);
+        break;
+    }else if(currSum>target) {
+        end--;
+    }else {
+        st++;
+    }
+}
+
+for(int i =0; i<ans.size(); i++){
+        cout<<ans[i]<<" ";
+    }
+}*/
+
+//2D VECTOR
+//dynamic ki tarah 2d vector bhi vector of vectors se bnega
+int main() {
+    vector<vector<int>> matrix = {{1,2,3},{4,5,6},{7,8,9}};
+    for(int i = 0; i<matrix.size(); i++){
+        for(int j=0; j<matrix[i].size(); j++){
+            cout<<matrix[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    
+}
